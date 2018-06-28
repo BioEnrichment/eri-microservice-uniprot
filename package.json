@@ -5,17 +5,19 @@
   "main": "sybiont.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon --require @std/esm lib/server.js"
+    "start": "nodemon --require esm lib/server.js"
   },
   "author": "James Alastair McLaughlin <j.a.mclaughlin@ncl.ac.uk>",
   "license": "BSD-2-Clause",
-  "@std/esm": "cjs",
+  "esm": {
+      "cjs": true
+  },
   "dependencies": {
-    "@std/esm": "^0.19.1",
     "bioterms": "^0.2.1",
     "body-parser": "^1.18.2",
     "eri-config": "git+https://github.com/BioEnrichment/eri-config.git",
     "eri-xrefdb-client": "git+https://github.com/BioEnrichment/eri-xrefdb-client.git",
+    "esm": "^3.0.55",
     "express": "^4.16.2",
     "ldf-facade": "git+https://github.com/BioEnrichment/ldf-facade.git",
     "libxmljs": "^0.18.7",
